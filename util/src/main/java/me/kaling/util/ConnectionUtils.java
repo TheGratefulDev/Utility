@@ -8,8 +8,6 @@ import android.util.Log;
 
 import java.io.IOException;
 
-import static android.content.ContentValues.TAG;
-
 public class ConnectionUtils {
     /**
      * Check if the device isOnline
@@ -23,7 +21,7 @@ public class ConnectionUtils {
             try{
                 Process ipProcess = runtime.exec("/system/bin/ping -c 1 8.8.8.8");
                 int exitValue = ipProcess.waitFor();
-                Log.i(TAG, "exitValue " + exitValue);
+                Log.i("Exit Value : ", String.valueOf(exitValue));
 
                 return (exitValue == 0);
 

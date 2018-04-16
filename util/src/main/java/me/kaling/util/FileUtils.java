@@ -25,13 +25,13 @@ public class FileUtils {
                     deleteDirectoryOfThis(file1);
                 }else{
                     boolean deleted = file1.delete();
-                    Log.d(TAG, deleted + " " + file1.toString() );
+                    Log.d(TAG, "File Delete : " + deleted  );
                 }
 
             }
         }else{
             boolean deleted = file.delete();
-            Log.d(TAG, deleted + " " + file.toString() );
+            Log.d(TAG, "File Delete : " + deleted  );
         }
     }
 
