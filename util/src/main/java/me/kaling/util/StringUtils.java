@@ -1,6 +1,7 @@
 package me.kaling.util;
 
 import android.text.Html;
+import android.text.TextUtils;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -56,6 +57,26 @@ public class StringUtils {
             }
         }
         return true;
+    }
+
+
+
+    public static String removeNullAndEmpty(String string){
+
+        if( string == null){
+            return "";
+        }
+
+        if( TextUtils.isEmpty(string.trim()) ){
+            return "";
+        }
+
+        if( string.trim().equalsIgnoreCase("null") ){
+            return "";
+        }
+
+        return string;
+
     }
 
 }
